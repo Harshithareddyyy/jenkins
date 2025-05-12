@@ -1,15 +1,17 @@
 pipeline {
-    agent { 
+    agent {
         node {
             label 'docker-agent-alpine'
-            }
-      }
+        }
+    }
     triggers {
-        pollSCM '*/5 * * * *'
+        pollSCM('*/5 * * * *')
     }
     stages {
         stage('Build') {
             steps {
+                echo "Name: Harshitha"
+                echo "Roll No: SE22UARI097"
                 echo "Building.."
                 sh '''
                 echo "Building from Jenkins file"
